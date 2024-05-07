@@ -53,5 +53,26 @@ public class Hello {
         // String literals: "Hello", "World", "Java"
         // Boolean literals: true, false
         
+        // Type conversion and casting
+        // Implicit type conversion: byte -> short -> int -> long -> float -> double
+        // Explicit type conversion: double -> float -> long -> int -> short -> byte
+        // Casting: (data_type) variable_name
+        int a1 =257;
+        byte k1 = (byte)a1;
+        System.out.println(k1);
+
+        float f1 = 10.5f;
+        int i1 = (int)f1;
+        System.out.println(i1);
+
+        // Type promotion
+        // byte -> short -> int -> long -> float -> double
+        // byte + int -> int
+        byte b1 = 10;
+        int i2 = 20;
+        int sum = b1 + i2;
+        System.out.println(sum);
+        
+
     }
 }
