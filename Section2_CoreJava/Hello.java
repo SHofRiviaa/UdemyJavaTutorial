@@ -73,6 +73,78 @@ public class Hello {
         int sum = b1 + i2;
         System.out.println(sum);
         
+        // Operators
+        // Arithmetic operators: +, -, *, /, %
+        int num1 = 10;
+        int num2 = 20;
+        System.out.println("Sum of num1 and num2 is: " + (num1 + num2));
+        System.out.println("Difference of num1 and num2 is: " + (num1 - num2));
+        System.out.println("Product of num1 and num2 is: " + (num1 * num2));
+        System.out.println("Division of num1 and num2 is: " + (num1 / num2));
+
+        num1 = num1 + 1;
+        num1 += 1;
+        // post increment
+        num1++; //fetch the value and then increment
+        // pre increment
+        ++num1; //increment the value and then fetch
+        System.out.println("Increment of num1 is: " + num1);
+
+        // Relational operators: >, <, >=, <=, ==, !=
+        System.out.println("Is num1 greater than num2: " + (num1 > num2));
+        System.out.println("Is num1 less than num2: " + (num1 < num2));
+        System.out.println("Is num1 greater than or equal to num2: " + (num1 >= num2));
+        System.out.println("Is num1 less than or equal to num2: " + (num1 <= num2));
+        System.out.println("Is num1 equal to num2: " + (num1 == num2));
+        System.out.println("Is num1 not equal to num2: " + (num1 != num2));
+
+        // Logical operators: &&, ||, !
+        System.out.println("Logical AND of num1 and num2: " + (num1 > num2 && num1 < num2));
+        System.out.println("Logical OR of num1 and num2: " + (num1 > num2 || num1 < num2));
+        System.out.println("Logical NOT of num1: " + !(num1 > num2));
+
+        // Short circuit operators
+        // &&: if the first condition is false, then the second condition is not checked
+        // ||: if the first condition is true, then the second condition is not checked
+        int x = 10;
+        int y = 20;
+        if (x > 10 && y > 10) {
+            System.out.println("Both x and y are greater than 10");
+        } else {
+            System.out.println("Either x or y is not greater than 10");
+        }
+
+        // Conditional statements
+        // if, if-else, if-else-if, switch-case
+        if (x > 10) {
+            System.out.println("x is greater than 10");
+        } else {
+            System.out.println("x is not greater than 10");
+        }
+
+        if (x > 10) {
+            System.out.println("x is greater than 10");
+        } else if (x < 10) {
+            System.out.println("x is less than 10");
+        } else {
+            System.out.println("x is equal to 10");
+        }
+
+        switch (x) {
+            case 10:
+                System.out.println("x is equal to 10");
+                break;
+            case 20:
+                System.out.println("x is equal to 20");
+                break;
+            default:
+                System.out.println("x is not equal to 10 or 20");
+        }
+
+        // Terenary operator
+        // variable = (condition) ? expression1 : expression2;
+        int result = (x > 10) ? 1 : 0;
+        System.out.println("Result is: " + result);
 
     }
 }
