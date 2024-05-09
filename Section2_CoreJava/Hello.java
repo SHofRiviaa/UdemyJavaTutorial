@@ -146,5 +146,63 @@ public class Hello {
         int result = (x > 10) ? 1 : 0;
         System.out.println("Result is: " + result);
 
+        // Switch statement with string
+        String day = "Wednesday";
+        switch (day) {
+            case "Monday":
+                System.out.println("Today is Monday");
+                break;
+            case "Tuesday":
+                System.out.println("Today is Tuesday");
+                break;
+            case "Wednesday":
+                System.out.println("Today is Wednesday");
+                break;
+            case "Thursday":
+                System.out.println("Today is Thursday");
+                break;
+            case "Friday":
+                System.out.println("Today is Friday");
+                break;
+            case "Saturday":
+                System.out.println("Today is Saturday");
+                break;
+            case "Sunday":
+                System.out.println("Today is Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+        
+        // Loops
+        // for, while, do-while
+        for (int i3 = 0; i3 < 5; i3++) {
+            System.out.println("Value of i3 is: " + i3);
+        }
+
+        int i4 = 0;
+        while (i4 < 5) {
+            System.out.println("Value of i4 is: " + i4);
+            i4++;
+        }
+
+        int i5 = 0;
+
+        do {
+            System.out.println("Value of i5 is: " + i5);
+            i5++;
+        } while (i5 < 5);
+
+        int a3 = 3;
+        int b3 = 6;
+        int result3 = (~a3 & b3) | (a3 & ~b3);
+        System.out.println("Quiz q"+ result3);
+
+        int x2 = 5;
+        int y2 = 10;
+        int z2 = (x2++ > 5 && y2-- < 10) ? x2-- : y2;
+
+        System.out.println("Quiz q"+ z2 + " " + x2 + " " + y2);
+
     }
 }
