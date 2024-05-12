@@ -1,5 +1,39 @@
 package Section2_CoreJava;
 
+class Calculator {
+
+    int a;
+    int b;
+
+    Calculator(int a, int b) {
+        System.out.println("Calculator object is created");
+        this.a = a;
+        this.b = b;
+    }
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public int divide(int a, int b) {
+        return a / b;
+    }
+
+    // Method overloading
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+}
+
 public class Hello {
     public static void main(String[] args) {
         
@@ -203,6 +237,85 @@ public class Hello {
         int z2 = (x2++ > 5 && y2-- < 10) ? x2-- : y2;
 
         System.out.println("Quiz q"+ z2 + " " + x2 + " " + y2);
+
+        // OOPs concepts
+        // Class, Object, Inheritance, Polymorphism, Abstraction, Encapsulation
+        // Class: blueprint of an object
+        // Object: instance of a class
+
+        // Object - properties and behavior
+        // Inheritance: mechanism in which one class acquires the properties and behavior of another class
+        // Polymorphism: ability to present the same interface for different data types
+        // Abstraction: hiding the implementation details and showing only the functionality
+        // Encapsulation: wrapping up of data and methods into a single unit
+
+        Calculator calc = new Calculator(10, 20);
+        System.out.println("Sum of 10 and 20 with calculator is: " + calc.add(10, 20));
+        System.out.println("Difference of 10 and 20 with calculator is: " + calc.subtract(10, 20));
+        System.out.println("Product of 10 and 20 with calculator is: " + calc.multiply(10, 20));
+        System.out.println("Division of 10 and 20 with calculator is: " + calc.divide(10, 20));
+
+        
+        // Method overloading: same method name with different parameters
+        // Method signature: method name + parameters
+        System.out.println("Sum of 10, 20 and 30 with calculator is: " + calc.add(10, 20, 30));
+
+        // JVM: Java Virtual Machine
+        // JVM is responsible for converting byte code into machine code
+        // JRE: Java Runtime Environment
+        // JRE is a set of tools used to run Java applications
+
+        // JDK: Java Development Kit
+        // JDK is a set of tools used to develop Java applications
+
+        // Stack memory: method calls and local variables 
+        // Heap memory: objects and instance variables
+
+        // Array: collection of similar data types
+        // Array declaration: data_type[] array_name;
+        // Array initialization: array_name = new data_type[size];
+        // Array declaration and initialization: data_type[] array_name = new data_type[size];
+        int[] arr = new int[5];
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+        arr[3] = 40;
+        arr[4] = 50;
+
+        for (int i6 = 0; i6 < arr.length; i6++) {
+            System.out.println("Value of arr at index " + i6 + " is: " + arr[i6]);
+        }
+
+        int[] arr1 = {10, 20, 30, 40, 50};
+        for (int i7 = 0; i7 < arr1.length; i7++) {
+            System.out.println("Value of arr1 at index " + i7 + " is: " + arr1[i7]);
+        }
+
+        // Enhanced for loop
+
+        for (int val : arr1) {
+            System.out.println("In enhanced for loop, Value of val is: " + val);
+        }
+
+        // Multi-dimensional array
+        int[][] arr2 = new int[2][2];
+        arr2[0][0] = 10;
+        arr2[0][1] = 20;
+        arr2[1][0] = 30;
+        arr2[1][1] = 40;
+
+        for (int i8 = 0; i8 < arr2.length; i8++) {
+            for (int j1 = 0; j1 < arr2[i8].length; j1++) {
+                System.out.println("Value of arr2 at index " + i8 + " " + j1 + " is: " + arr2[i8][j1]);
+            }
+        }
+
+        int[][] arr3 = {{10, 20}, {30, 40}};
+        for (int i9 = 0; i9 < arr3.length; i9++) {
+            for (int j2 = 0; j2 < arr3[i9].length; j2++) {
+                System.out.println("Value of arr3 at index " + i9 + " " + j2 + " is: " + arr3[i9][j2]);
+            }
+        }
 
     }
 }
