@@ -317,5 +317,40 @@ public class Hello {
             }
         }
 
+        // Jaggered array
+
+        int[][] arr4 = new int[3][];
+        arr4[0] = new int[2];
+        arr4[1] = new int[3];
+        arr4[2] = new int[4];
+
+        arr4[0][0] = 10;
+        arr4[0][1] = 20;
+        arr4[1][0] = 30;
+        arr4[1][1] = 40;
+        arr4[1][2] = 50;
+        arr4[2][0] = 60;
+        arr4[2][1] = 70;
+        arr4[2][2] = 80;
+        arr4[2][3] = 90;
+
+        for (int i10 = 0; i10 < arr4.length; i10++) {
+            for (int j3 = 0; j3 < arr4[i10].length; j3++) {
+                System.out.println("Value of arr4 at index " + i10 + " " + j3 + " is: " + arr4[i10][j3]);
+            }
+        }
+        
+        // Array of objects
+        Calculator[] calcs = new Calculator[2];
+        calcs[0] = new Calculator(10, 20);
+
+        System.out.println("Sum of 10 and 20 with calculator is: " + calcs[0].add(10, 20));
+        System.out.println(calcs[0]);
+
+        // for each loop
+        for (Calculator calc1 : calcs) {
+            System.out.println(calc1);
+        }
+
     }
 }
