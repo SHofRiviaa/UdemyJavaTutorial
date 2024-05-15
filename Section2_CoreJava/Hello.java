@@ -34,6 +34,25 @@ class Calculator {
 
 }
 
+class Mobile {
+
+    String brand;
+    String model;
+    int price;
+    static String type;
+
+    Mobile(String brand, String model, int price) {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+    }
+
+    public String toString() {
+        return "Brand: " + brand + " Model: " + model + " Price: " + price;
+    }
+
+}
+
 public class Hello {
     public static void main(String[] args) {
         
@@ -275,6 +294,7 @@ public class Hello {
         // Array declaration: data_type[] array_name;
         // Array initialization: array_name = new data_type[size];
         // Array declaration and initialization: data_type[] array_name = new data_type[size];
+        System.out.println("*****************************************");
         int[] arr = new int[5];
         arr[0] = 10;
         arr[1] = 20;
@@ -291,12 +311,14 @@ public class Hello {
             System.out.println("Value of arr1 at index " + i7 + " is: " + arr1[i7]);
         }
 
+        System.out.println("*****************************************");
         // Enhanced for loop
 
         for (int val : arr1) {
             System.out.println("In enhanced for loop, Value of val is: " + val);
         }
 
+        System.out.println("*****************************************");
         // Multi-dimensional array
         int[][] arr2 = new int[2][2];
         arr2[0][0] = 10;
@@ -317,6 +339,7 @@ public class Hello {
             }
         }
 
+        System.out.println("*****************************************");
         // Jaggered array
 
         int[][] arr4 = new int[3][];
@@ -340,6 +363,7 @@ public class Hello {
             }
         }
         
+        System.out.println("*****************************************");
         // Array of objects
         Calculator[] calcs = new Calculator[2];
         calcs[0] = new Calculator(10, 20);
@@ -351,6 +375,82 @@ public class Hello {
         for (Calculator calc1 : calcs) {
             System.out.println(calc1);
         }
+
+        System.out.println("*****************************************");
+        // String class
+        // String is a sequence of characters
+        // String is immutable
+        // String class is present in java.lang package
+        // String class has many methods like length(), charAt(), indexOf(), substring(), trim()
+        // toLowerCase(), toUpperCase(), equals(), equalsIgnoreCase(), contains(), startsWith(), endsWith(), replace(), split(), concat(), valueOf(), format(), intern()
+        // String class is final, so it cannot be inherited
+        // String class is thread safe
+        // String class is serializable
+        // String class is comparable
+        // String class is used in many classes like StringBuffer, StringBuilder, StringTokenizer, Scanner, Pattern, Matcher, URL, URI, InetAddress, Date, Calendar, Locale, Pattern, Matcher, Scanner, Formatter
+
+        String str = "Hello, World!";
+        System.out.println("Length of str is: " + str.length());
+        System.out.println("Character at index 0 of str is: " + str.charAt(0));
+        System.out.println("Index of l in str is: " + str.indexOf('l'));
+        System.out.println("Substring of str is: " + str.substring(0, 5));
+        System.out.println("Trim of str is: " + str.trim());
+        System.out.println("Lower case of str is: " + str.toLowerCase());
+        System.out.println("Upper case of str is: " + str.toUpperCase());
+        System.out.println("Is str equal to Hello, World!: " + str.equals("Hello, World!"));
+        System.out.println("Is str equal to hello, world!: " + str.equalsIgnoreCase("hello, world!"));
+        System.out.println("Does str contain Hello: " + str.contains("Hello"));
+        System.out.println("Does str start with Hello: " + str.startsWith("Hello"));
+        System.out.println("Does str end with World!: " + str.endsWith("World!"));
+        System.out.println("Replace of str is: " + str.replace("Hello", "Hi"));
+        System.out.println("Split of str is: " + str.split(",")[0]);
+        System.out.println("Concat of str is: " + str.concat(" Java"));
+        System.out.println("Value of 10 in str is: " + String.valueOf(10));
+        // String constant pool
+        // String pool is a memory area in heap memory
+        // String pool is used to store string literals
+        // String pool is used to store unique strings
+        // String pool is used to save memory
+        // String pool is used to increase performance
+        // String pool is used to reduce garbage collection
+        // String pool is used to reduce memory leaks
+        // String pool is used to reduce memory fragmentation
+        // String pool is used to reduce memory allocation
+        // ex: String str1 = "Hello"; String str2 = "Hello"; str1 and str2 will point to the same memory location
+        // ex: String str1 = new String("Hello"); String str2 = new String("Hello"); str1 and str2 will point to different memory locations
+        
+        // Mutable string: StringBuffer, StringBuilder
+        // StringBuffer: thread safe, synchronized, slow
+        // StringBuilder: not thread safe, not synchronized, fast
+        System.out.println("*****************************************");
+        StringBuffer sb = new StringBuffer("Hello, World!");
+        System.out.println("Length of sb is: " + sb.length());
+        System.out.println("Capacity of sb is: " + sb.capacity());
+        System.out.println("Append of sb is: " + sb.append(" Java"));
+        System.out.println("Insert of sb is: " + sb.insert(0, "Hi, "));
+        System.out.println("Delete of sb is: " + sb.delete(0, 4));
+        System.out.println("Reverse of sb is: " + sb.reverse());
+        System.out.println("Replace of sb is: " + sb.replace(0, 5, "Hello"));
+        System.out.println("Substring of sb is: " + sb.substring(0, 5));
+        System.out.println("CharAt of sb is: " + sb.charAt(0));
+
+        
+        System.out.println("*****************************************");
+
+        // Static keyword
+        // Static variable: class level variable, common for all objects
+        // Static method: class level method, common for all objects
+        // Static block: used to initialize static variables
+        // Static means that the variable or method belongs to the class and not to the object
+        
+        Mobile.type = "Smartphone";
+        Mobile mobile1 = new Mobile("Apple", "iPhone 12", 1000);
+        Mobile mobile2 = new Mobile("Samsung", "Galaxy S21", 900);
+        System.out.println(mobile1);
+        System.out.println(mobile2);
+        System.out.println("Type of mobile is: " + Mobile.type);
+
+        
 
     }
 }
