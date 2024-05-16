@@ -4,6 +4,14 @@ class Calculator {
 
     int a;
     int b;
+    static int c;
+
+    // Static block
+    static {
+
+        c = 100;
+        System.out.println("Static block is executed");
+    }
 
     Calculator(int a, int b) {
         System.out.println("Calculator object is created");
@@ -32,6 +40,11 @@ class Calculator {
         return a + b + c;
     }
 
+    // Static method
+    public static int add(int a, int b, int c, int d) {
+        return a + b;
+    }
+
 }
 
 class Mobile {
@@ -50,6 +63,40 @@ class Mobile {
     public String toString() {
         return "Brand: " + brand + " Model: " + model + " Price: " + price;
     }
+
+}
+
+class Human {
+    // private: access within the class
+    // default: access within the package
+    // protected: access within the package and outside the package through inheritance
+    // public: access within the package and outside the package
+
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        // this: used to refer to the current object
+        // this.name: instance variable
+        // name: local variable
+        // preference is given to local variable
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Encapsulation: getter and setter methods
+    // Getter method: used to get the value of a private variable
+    // Setter method: used to set the value of a private variable
+
+    
 
 }
 
@@ -450,7 +497,25 @@ public class Hello {
         System.out.println(mobile2);
         System.out.println("Type of mobile is: " + Mobile.type);
 
-        
+        // Static method
+        System.out.println("Sum of 10 and 20 is: " + Calculator.add(10, 20, 30, 40));
+
+        // Class is first loaded and then the static block is executed and then objects are instantiated
+        // Static block is executed only once
+
+        // Encapsulation: wrapping up of data and methods into a single unit
+        // Encapsulation is used to hide the data and methods
+        // Encapsulation is used to protect the data and methods
+        // Encapsulation is used to restrict the access to the data and methods
+        // Encapsulation is used to prevent the data and methods from being modified
+        // Encapsulation is used to prevent the data and methods from being accessed
+        // Encapsulation is used to prevent the data and methods from being deleted
+        // Encapsulation is used to prevent the data and methods from being added
+        // Encapsulation is used to prevent the data and methods from being copied
+        // Encapsulation is used to prevent the data and methods from being moved
+        // Encapsulation is used to prevent the data and methods from being renamed
+        // Encapsulation is used to prevent the data and methods from being shared
+        // Encapsulation is used to prevent the data and methods from being exposed
 
     }
 }
