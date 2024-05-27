@@ -72,6 +72,28 @@ class Human {
     // protected: access within the package and outside the package through inheritance
     // public: access within the package and outside the package
 
+    // Constructor: used to initialize the object
+    // Constructor name is same as the class name
+    // Constructor does not have a return type
+    // Constructor is called when the object is created
+    // Constructor is called only once
+    // Constructor is called before the object is created
+    // Constructor is called before the instance variables are initialized
+    // Constructor is called before the methods are called
+    // Constructor is called before the static block is executed
+    
+    // Default constructor
+    public Human() {
+        System.out.println("Human object is created");
+    }
+
+    // Parameterized constructor
+    public Human(String name, int age) {
+        this.name = name;
+        this.age = age;
+        System.out.println("Human object is created with name: " + name + " and age: " + age);
+    }
+
     private String name;
     private int age;
 
@@ -516,6 +538,48 @@ public class Hello {
         // Encapsulation is used to prevent the data and methods from being renamed
         // Encapsulation is used to prevent the data and methods from being shared
         // Encapsulation is used to prevent the data and methods from being exposed
+
+        // Naming conventions
+        // Class name: PascalCase
+        // Method name: camelCase
+        // Variable name: camelCase
+        // Constant name: UPPERCASE
+        // Package name: lowercase
+        // Interface name: PascalCase
+        // Enum name: PascalCase
+        // Annotation name: PascalCase
+        // Object name: camelCase
+        // Constructor name: PascalCase
+        // Static block name: PascalCase
+
+        // Anonymous object
+        // Object without a reference
+        // Object without a name
+        // Object without a variable
+        // We cannot reuse the object
+        // We cannot access the object
+        // Why do we use anonymous objects?
+        // To save memory
+        // To save time, as we do not have to create a reference variable
+        // To save code, as we do not have to write a reference variable
+        // To save space, as we do not have to write a reference variable
+        // To save effort, as we do not have to write a reference variable
+        // ex: new Calculator(10, 20).add(10, 20);
+        new Calculator(a3, b3).add(a3, b3);
+
+        // Inheritance: mechanism in which one class acquires the properties and behavior of another class
+        // Inheritance is used to reuse the code
+        // Inheritance is used to reduce the code
+        // is-a relationship, has-a relationship
+        // Parent class, super class, base class
+        // Child class, sub class, derived class
+        // Types of inheritance: single, multi-level, hierarchical, multiple, hybrid
+        // Single inheritance: one class inherits from one class
+        // Multi-level inheritance: one class inherits from another class which inherits from another class
+        // Hierarchical inheritance: one class inherits from one class and another
+        // Multiple inheritance: one class inherits from multiple classes
+        // Hybrid inheritance: combination of multiple inheritance
+        // Inheritance is used to achieve code reusability
 
     }
 }
