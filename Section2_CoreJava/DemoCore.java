@@ -27,14 +27,6 @@ class Calculator {
         return a - b;
     }
 
-    public int multiply(int a, int b) {
-        return a * b;
-    }
-
-    public int divide(int a, int b) {
-        return a / b;
-    }
-
     // Method overloading
     public int add(int a, int b, int c) {
         return a + b + c;
@@ -122,7 +114,7 @@ class Human {
 
 }
 
-public class Hello {
+public class DemoCore {
     public static void main(String[] args) {
         
         // This is a single line comment
@@ -340,8 +332,6 @@ public class Hello {
         Calculator calc = new Calculator(10, 20);
         System.out.println("Sum of 10 and 20 with calculator is: " + calc.add(10, 20));
         System.out.println("Difference of 10 and 20 with calculator is: " + calc.subtract(10, 20));
-        System.out.println("Product of 10 and 20 with calculator is: " + calc.multiply(10, 20));
-        System.out.println("Division of 10 and 20 with calculator is: " + calc.divide(10, 20));
 
         
         // Method overloading: same method name with different parameters
@@ -580,6 +570,19 @@ public class Hello {
         // Multiple inheritance: one class inherits from multiple classes
         // Hybrid inheritance: combination of multiple inheritance
         // Inheritance is used to achieve code reusability
+
+        DemoCoreAdvCalc calc1 = new DemoCoreAdvCalc(10, 20); // single level inheritance
+        System.out.println("Sum of 10 and 20 with adv calculator is: " + calc1.add(10, 20));
+        System.out.println("Difference of 10 and 20 with adv calculator is: " + calc1.subtract(10, 20));
+        System.out.println("Product of 10 and 20 with adv calculator is: " + calc1.multiply(10, 20));
+        System.out.println("Division of 10 and 20 with adv calculator is: " + calc1.divide(10, 20));
+
+        DemoreCoreVeryAdvCalc calc2 = new DemoreCoreVeryAdvCalc(5, 4); // multi level inheritance
+        System.out.println("Sum of 10 and 20 with very adv calculator is: " + calc2.add(10, 20));
+        System.out.println("Difference of 10 and 20 with very adv calculator is: " + calc2.subtract(10, 20));
+        System.out.println("Product of 10 and 20 with very adv calculator is: " + calc2.multiply(10, 20));
+        System.out.println("Division of 10 and 20 with very adv calculator is: " + calc2.divide(10, 20));
+        System.out.println("Power of 10 and 20 with very adv calculator is: " + calc2.power(5, 4));
 
     }
 }
