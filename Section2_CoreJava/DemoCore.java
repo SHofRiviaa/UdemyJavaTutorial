@@ -1,5 +1,6 @@
 package Section2_CoreJava;
 
+
 class Calculator {
 
     int a;
@@ -564,11 +565,11 @@ public class DemoCore {
         // Parent class, super class, base class
         // Child class, sub class, derived class
         // Types of inheritance: single, multi-level, hierarchical, multiple, hybrid
-        // Single inheritance: one class inherits from one class
-        // Multi-level inheritance: one class inherits from another class which inherits from another class
-        // Hierarchical inheritance: one class inherits from one class and another
-        // Multiple inheritance: one class inherits from multiple classes
-        // Hybrid inheritance: combination of multiple inheritance
+        // Single inheritance: one class inherits from one class, supported in Java
+        // Multi-level inheritance: one class inherits from another class which inherits from another class, supported in Java
+        // Hierarchical inheritance: one class inherits from one class and another, not supported in Java
+        // Multiple inheritance: one class inherits from multiple classes, not supported in Java
+        // Hybrid inheritance: combination of multiple inheritance, supported in Java
         // Inheritance is used to achieve code reusability
 
         DemoCoreAdvCalc calc1 = new DemoCoreAdvCalc(10, 20); // single level inheritance
@@ -583,6 +584,12 @@ public class DemoCore {
         System.out.println("Product of 10 and 20 with very adv calculator is: " + calc2.multiply(10, 20));
         System.out.println("Division of 10 and 20 with very adv calculator is: " + calc2.divide(10, 20));
         System.out.println("Power of 10 and 20 with very adv calculator is: " + calc2.power(5, 4));
+
+        // this() and super() methods
+        // this(): used to refer to the current object
+        // this(): used to call the current class constructor
+        // super(): used to refer to the parent object
+        // super(): used to call the parent class constructor
 
     }
 }

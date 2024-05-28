@@ -16,4 +16,11 @@ public class DemoCoreAdvCalc extends Calculator{
     public int divide(int a, int b) {
         return a / b;
     }
+
+    // Method overriding
+    @Override
+    public int add(int a, int b) {
+        System.out.println("This is the add method of DemoCoreAdvCalc class");
+        return a + b;
+    }
 }
