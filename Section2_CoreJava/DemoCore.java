@@ -1,44 +1,17 @@
 package Section2_CoreJava;
 
+// package: used to organize the classes
+// package name should be in lowercase
+// package name should be in reverse domain name, ex: com.example, org.example, net.example
+// package name should be unique
+// package name should not be a keyword
 
-class Calculator {
+// import: used to import the classes
+// import package_name.class_name;
+// import package_name.*; // import all the classes in the package
+// import static package_name.class_name;
+import Section2_CoreJava.tools.*;
 
-    int a;
-    int b;
-    static int c;
-
-    // Static block
-    static {
-
-        c = 100;
-        System.out.println("Static block is executed");
-    }
-
-    Calculator(int a, int b) {
-        System.out.println("Calculator object is created");
-        this.a = a;
-        this.b = b;
-    }
-
-    public int add(int a, int b) {
-        return a + b;
-    }
-
-    public int subtract(int a, int b) {
-        return a - b;
-    }
-
-    // Method overloading
-    public int add(int a, int b, int c) {
-        return a + b + c;
-    }
-
-    // Static method
-    public static int add(int a, int b, int c, int d) {
-        return a + b;
-    }
-
-}
 
 class Mobile {
 
@@ -60,10 +33,6 @@ class Mobile {
 }
 
 class Human {
-    // private: access within the class
-    // default: access within the package
-    // protected: access within the package and outside the package through inheritance
-    // public: access within the package and outside the package
 
     // Constructor: used to initialize the object
     // Constructor name is same as the class name
@@ -111,7 +80,23 @@ class Human {
     // Getter method: used to get the value of a private variable
     // Setter method: used to set the value of a private variable
 
+}
+
+// Parent class
+class A {
     
+        public void display() {
+            System.out.println("This is the display method of class A");
+        }
+}
+
+class B extends A {
+        public void display() {
+            System.out.println("This is the display method of class B");
+        }
+}
+
+class C extends A {
 
 }
 
@@ -330,7 +315,7 @@ public class DemoCore {
         // Abstraction: hiding the implementation details and showing only the functionality
         // Encapsulation: wrapping up of data and methods into a single unit
 
-        Calculator calc = new Calculator(10, 20);
+        DemoreCoreCalc calc = new DemoreCoreCalc(10, 20);
         System.out.println("Sum of 10 and 20 with calculator is: " + calc.add(10, 20));
         System.out.println("Difference of 10 and 20 with calculator is: " + calc.subtract(10, 20));
 
@@ -425,14 +410,14 @@ public class DemoCore {
         
         System.out.println("*****************************************");
         // Array of objects
-        Calculator[] calcs = new Calculator[2];
-        calcs[0] = new Calculator(10, 20);
+        DemoreCoreCalc[] calcs = new DemoreCoreCalc[2];
+        calcs[0] = new DemoreCoreCalc(10, 20);
 
         System.out.println("Sum of 10 and 20 with calculator is: " + calcs[0].add(10, 20));
         System.out.println(calcs[0]);
 
         // for each loop
-        for (Calculator calc1 : calcs) {
+        for (DemoreCoreCalc calc1 : calcs) {
             System.out.println(calc1);
         }
 
@@ -511,7 +496,7 @@ public class DemoCore {
         System.out.println("Type of mobile is: " + Mobile.type);
 
         // Static method
-        System.out.println("Sum of 10 and 20 is: " + Calculator.add(10, 20, 30, 40));
+        System.out.println("Sum of 10 and 20 is: " + DemoreCoreCalc.add(10, 20, 30, 40));
 
         // Class is first loaded and then the static block is executed and then objects are instantiated
         // Static block is executed only once
@@ -556,7 +541,7 @@ public class DemoCore {
         // To save space, as we do not have to write a reference variable
         // To save effort, as we do not have to write a reference variable
         // ex: new Calculator(10, 20).add(10, 20);
-        new Calculator(a3, b3).add(a3, b3);
+        new DemoreCoreCalc(a3, b3).add(a3, b3);
 
         // Inheritance: mechanism in which one class acquires the properties and behavior of another class
         // Inheritance is used to reuse the code
@@ -590,6 +575,46 @@ public class DemoCore {
         // this(): used to call the current class constructor
         // super(): used to refer to the parent object
         // super(): used to call the parent class constructor
+
+        // Access modifiers
+        // public: access within the package and outside the package
+        // private: access within the class
+        // protected: access within the package and outside the package through inheritance
+        // default: access within the package
+
+        // 2 types of polymorphism: compile time, run time
+        // Compile time polymorphism: method overloading, static polymorphism, early binding
+        // Run time polymorphism: method overriding, dynamic method dispatch, late binding
+
+        // Dynamic method dispatch
+        // Parent class reference and child class object
+        // Parent class reference can refer to child class
+        // Parent class reference can call child class methods
+        // Parent class reference cannot call child class variables
+
+        // type vs implementation
+        // type: reference type
+        // implementation: object type
+
+        A a4 = new B();
+        // will call the display method of class B
+        // will know the type at runtime, but will call the method of the object, not the reference
+        // because the reference is of type A and the object is of type B
+        a4.display();
+
+        A a5 = new A();
+        a5.display();
+
+        B b4 = new B();
+        b4.display();
+
+        // final keyword - variable, method, class
+        // final variable: constant, cannot be changed
+        // final method: cannot be overridden
+        // final class: cannot be inherited
+        // final variable should be initialized
+        // ex: final int a = 10;
+        // ex method: public final void display() {}
 
     }
 }

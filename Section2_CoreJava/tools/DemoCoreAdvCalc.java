@@ -1,11 +1,11 @@
-package Section2_CoreJava;
+package Section2_CoreJava.tools;
 
 // This class extends Calculator class and implements multiply and divide methods
 // This class is used to demonstrate the concept of inheritance
 
-public class DemoCoreAdvCalc extends Calculator{
+public class DemoCoreAdvCalc extends DemoreCoreCalc{
 
-    DemoCoreAdvCalc(int a, int b) {
+    public DemoCoreAdvCalc(int a, int b) {
         super(a, b);
     }
 

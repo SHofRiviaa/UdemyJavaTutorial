@@ -1,8 +1,8 @@
-package Section2_CoreJava;
+package Section2_CoreJava.tools;
 
 public class DemoreCoreVeryAdvCalc extends DemoCoreAdvCalc{
     
-    DemoreCoreVeryAdvCalc(int a, int b) {
+    public DemoreCoreVeryAdvCalc(int a, int b) {
         super(a, b);
     }
     
