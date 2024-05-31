@@ -26,8 +26,22 @@ class Mobile {
         this.price = price;
     }
 
+    // toString method: used to print the object
+    // toString method is present in Object class
+    // toString method is overridden in the class
+    // the default implementation of toString method is class_name@hashcode
     public String toString() {
         return "Brand: " + brand + " Model: " + model + " Price: " + price;
+    }
+
+    // equals method: used to compare the objects
+    public boolean equals(Object obj) {
+        Mobile mobile = (Mobile) obj;
+        if (this.brand.equals(mobile.brand) && this.model.equals(mobile.model) && this.price == mobile.price) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
@@ -615,6 +629,17 @@ public class DemoCore {
         // final variable should be initialized
         // ex: final int a = 10;
         // ex method: public final void display() {}
+
+        // type casting, int to double, double to int
+        // upcasting: child class object to parent class reference
+        // downcasting: parent class reference to child class object
+        // instanceof operator: used to check the type of an object
+
+        // Wrapper classes: Integer, Double, Float, Character, Boolean
+        // Wrapper classes are used to convert primitive data types into objects
+
+        // Autoboxing: converting primitive data types into objects
+        // Unboxing: converting objects into primitive data types
 
     }
 }
