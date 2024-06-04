@@ -1,16 +1,6 @@
-package Section2_CoreJava;
+package Section2_Core;
 
-// package: used to organize the classes
-// package name should be in lowercase
-// package name should be in reverse domain name, ex: com.example, org.example, net.example
-// package name should be unique
-// package name should not be a keyword
-
-// import: used to import the classes
-// import package_name.class_name;
-// import package_name.*; // import all the classes in the package
-// import static package_name.class_name;
-import Section2_CoreJava.tools.*;
+import Section2_Core.tools.*;
 
 
 class Mobile {

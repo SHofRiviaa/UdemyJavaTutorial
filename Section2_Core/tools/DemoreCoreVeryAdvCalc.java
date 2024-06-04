@@ -1,4 +1,4 @@
-package Section2_CoreJava.tools;
+package Section2_Core.tools;
 
 public class DemoreCoreVeryAdvCalc extends DemoCoreAdvCalc{
     

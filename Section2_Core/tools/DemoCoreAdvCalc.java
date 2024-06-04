@@ -1,4 +1,4 @@
-package Section2_CoreJava.tools;
+package Section2_Core.tools;
 
 // This class extends Calculator class and implements multiply and divide methods
 // This class is used to demonstrate the concept of inheritance
