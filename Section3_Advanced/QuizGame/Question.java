@@ -1,14 +1,23 @@
 package Section3_Advanced.QuizGame;
 
+import java.util.Arrays;
+
 public class Question {
-    private int id[];
+    private int id;
     private String question;
     private String options[];
     private String correctAnswer;
-    public int[] getId() {
+
+    public Question(int id, String question, String[] options, String correctAnswer) {
+        this.id = id;
+        this.question = question;
+        this.options = options;
+        this.correctAnswer = correctAnswer;
+    }
+    public int getId() {
         return id;
     }
-    public void setId(int[] id) {
+    public void setId(int id) {
         this.id = id;
     }
     public String getQuestion() {
@@ -29,6 +38,11 @@ public class Question {
     public void setCorrectAnswer(String correctAnswer) {
         this.correctAnswer = correctAnswer;
     }
-
+    @Override
+    public String toString() {
+        return "Question [id=" + id + ", question=" + question + ", options=" + Arrays.toString(options)
+                + ", correctAnswer=" + correctAnswer + "]";
+    }
+    
     
 }
