@@ -128,8 +128,15 @@ interface Computer
 @FunctionalInterface // annotation, helps to check if the interface is a functional interface so that it can have only one abstract method
 interface AT
 {
-    void show();
+    void show(int i);
 }
+
+@FunctionalInterface
+interface ATT
+{
+    int show(int i, int j);
+}
+
 
 public class ConceptInterface {
     public static void main(String[] args) {
@@ -140,18 +147,24 @@ public class ConceptInterface {
         System.out.println(K.age);
 
         // A obj = new A(); // error: A is abstract; cannot be instantiated
-        Computer alienware = new Laptop();
+        //Computer alienware = new Laptop();
         Computer dell = new Desktop();
         Developer dev = new Developer();
         dev.devApp(dell);
 
-        AT obj2 = new AT() {
+        /* AT obj2 = new AT() {
             public void show() {
                 System.out.println("In show AT");
             }
-        };
+        }; */
 
-        obj2.show();
+        AT obj2 = (int i) -> System.out.println("In show AT");
+
+        ATT obj3 = (int i, int j) -> i+j; // lambda expression, used to implement functional interface
+
+
+        obj2.show(5);
+        System.out.println(obj3.show(5, 6));
         
     }
 }
