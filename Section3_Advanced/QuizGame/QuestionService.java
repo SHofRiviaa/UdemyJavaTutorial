@@ -36,6 +36,7 @@ public class QuestionService {
                 System.out.println("Wrong answer!");
             }
         }
+        scanner.close();
         System.out.println("Your score is: " + score);
         
     }
