@@ -6,3 +6,28 @@
 // It is a framework that provides comprehensive infrastructure support for developing Java applications.
 // Spring handles the infrastructure so you can focus on your application.
 // Spring enables you to build applications from "plain old Java objects" (POJOs) and to apply enterprise services non-invasively to POJOs.
+
+// IoC (Inversion of Control)
+// IoC is a design principle in which the control of objects is transferred to a container or framework.
+// It is the process of creating objects, managing their life cycle and injecting dependencies between objects.
+// IoC container is a framework that manages the dependencies between objects.
+
+// DI (Dependency Injection)
+// DI is a design pattern that implements IoC principle.
+// It is a process of providing the dependencies of an object at the time of object creation.
+// It is a design pattern that allows us to remove the hard-coded dependencies and make our application loosely coupled,
+// extendable and maintainable.
+
+// Focus on the business logic, not on the infrastructure
+// Spring provides a comprehensive infrastructure support for developing Java applications.
+// It handles the infrastructure so you can focus on your application.
+
+// Spring vs Spring Boot
+// Spring is a framework that provides comprehensive infrastructure support for developing Java applications.
+// Spring Boot is an opinionated view of the Spring platform and third-party libraries.
+// Spring Boot is a project built on the top of the Spring framework.
+// It provides a simpler and faster way to set up, configure, and run both simple and web-based applications.
+// Spring 6 and Spring Boot 3 are the latest versions of Spring and Spring Boot respectively.
+
+
+
