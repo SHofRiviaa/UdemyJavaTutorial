@@ -72,6 +72,18 @@ public class DemoJDBC {
         String url = "jdbc:postgresql://localhost:5432/demo";
         String user = "postgres";
         String password = "";
+        String query = "SELECT * FROM student";
+
+        int sid = 102;
+        String sname = "Unluck";
+        int marks = 12;
+
+        //String insertQuery = "INSERT INTO student (sid, sname, marks) VALUES (5, 'Gin', 25)";
+        //String updateQuery = "UPDATE student SET marks = 26 WHERE sid = 5";
+        //String deleteQuery = "DELETE FROM student WHERE sid = 2";
+        //String insertQuery = "INSERT INTO student (sid, sname, marks) VALUES (" + sid + ", '" + sname + "', " + marks + ")";
+
+        String insertQuery = "INSERT INTO student (sid, sname, marks) VALUES (?, ?, ?)";
 
         Class.forName("org.postgresql.Driver");
 
@@ -79,6 +91,58 @@ public class DemoJDBC {
 
         System.out.println("Connected to the database!");
 
+        // Problem with this approach is that it is vulnerable to SQL Injection
+        // Use PreparedStatement instead
+        // PreparedStatement is a subinterface of Statement
+        // It is used to execute parameterized queries
+        // It is more secure and efficient than Statement
+        // It prevents SQL Injection attacks
+        // It is precompiled and cached by the database
+        // It is faster than Statement for repeated execution of the same query
+        // It is used to execute queries with parameters
+        // It is used to execute queries with placeholders
+        Statement stmt = con.createStatement();
+        /*PreparedStatement stmt = con.prepareStatement(insertQuery);
+        stmt.setInt(1, sid);
+        stmt.setString(2, sname);
+        stmt.setInt(3, marks);*/
+
+        //boolean status = stmt.execute(insertQuery);
+        //boolean status = stmt.execute();
+        //boolean status = stmt.execute(updateQuery);
+        //boolean status = stmt.execute(deleteQuery);
+
+        //System.out.println("Query executed successfully!" + status);
+
+        // Execute the query using stmt.executeUpdate(insertQuery);
+        // Get the result using ResultSet rs = stmt.executeQuery(query);
+        ResultSet rs = stmt.executeQuery(query);
+
+        while(rs.next()) {
+            System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3));
+            // can also use column name
+        }
+
+        // CRUD Operations
+        // Create - INSERT
+        // Read - SELECT
+        // Update - UPDATE
+        // Delete - DELETE
+
+        // Example of INSERT query
+        // String insertQuery = "INSERT INTO student (id, name, age) VALUES (4, 'John', 25)";
+
+        // Example of UPDATE query
+        // String updateQuery = "UPDATE student SET age = 26 WHERE id = 4";
+
+        // Example of DELETE query
+        // String deleteQuery = "DELETE FROM student WHERE id = 4";
+
+        // Execute the query using stmt.executeUpdate(insertQuery);
+
+
+        con.close();
+        System.out.println("Connection closed!");
 
 
     }

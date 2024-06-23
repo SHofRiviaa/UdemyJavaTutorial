@@ -1,0 +1,8 @@
+
+// What is Spring?
+
+// Spring is a popular Java application framework.
+// Spring framework can be used to develop any Java application.
+// It is a framework that provides comprehensive infrastructure support for developing Java applications.
+// Spring handles the infrastructure so you can focus on your application.
+// Spring enables you to build applications from "plain old Java objects" (POJOs) and to apply enterprise services non-invasively to POJOs.
